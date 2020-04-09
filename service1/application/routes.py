@@ -24,5 +24,5 @@ def fortune():
 def output(fortuneshown):
     db.session.app(fortuneshown)
     db.session.commit()
-
+    return render_template('fortune.html', title='Fortune', fortuneshown=fortuneshown)
 
