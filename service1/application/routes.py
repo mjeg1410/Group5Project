@@ -4,7 +4,7 @@ from random import randint, random
 from string import string
 api = 'http://localhost:5003'
 
-tokenadd =  requests.get(api + '/merge')
+tokenadd =  request.get(api + '/merge')
 token = tokenadd.text
 def fortune():
     fortunes= ["You will have a terrible day","You will have a mediocre day","You will have a great day"]
