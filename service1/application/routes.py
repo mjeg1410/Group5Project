@@ -22,7 +22,7 @@ def fortune():
     return render_template('home.html', title='Home', fortuneshown=fortuneshown)
 @app.route('/fortune', methods=['GET','POST'])
 def output(fortuneshown):
-    db.session.app(fortuneshown)
+    db.session.add(fortuneshown)
     db.session.commit()
     return render_template('fortune.html', title='Fortune', fortuneshown=fortuneshown)
 
