@@ -10,5 +10,4 @@ def merge():
     response1 = requests.get(api1 +  '/number')
     response2 = requests.get(api2 + '/strsection')
     merged= (response1.text + response2.text)
-def fortune():
-    fortuneshown= #loop to determine fortune based on merged variable. Need a list/dictionary.
+    return response(merged)

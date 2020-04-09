@@ -1,0 +1,1 @@
+#need to create model for a single table to store fortunes, two fields primary key and fortune.
