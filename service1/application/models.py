@@ -1,1 +1,4 @@
-#need to create model for a single table to store fortunes, two fields primary key and fortune.
+from application import db
+class Fortunes(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    fortune = db.Column(db.String,nullalbe=False)

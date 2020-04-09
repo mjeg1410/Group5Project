@@ -1,1 +1,3 @@
-!need jinja template for a button that onclick activates the fortune generation, prints the fortune and commits it to the database
+{% block body_content %}
+<a href="{{ url_for('fortune') }}">Create your fortune</a>
+{% endblock body_content %}
