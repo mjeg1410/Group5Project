@@ -2,8 +2,13 @@ from application import app
 from flask import request, response
 from random import randint, random
 from string import string
+api1 = 'http://localhost:5001'
+api2 = 'http://localhost:5002'
+
 @app.route('/merge', methods=['GET','POST'])
 def merge():
-    merged= #need get requests from service 2 and 3 merged here then seperate function for fortune
+    response1 = requests.get(api1 +  '/number')
+    response2 = requests.get(api2 + '/strsection')
+    merged= (response1.text + response2.text)
 def fortune():
-    fortuneshown= #get request of merged tokens that is then passed through a comparative loop to choose a display.
+    fortuneshown= #loop to determine fortune based on merged variable. Need a list/dictionary.
