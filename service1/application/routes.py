@@ -3,7 +3,8 @@ from application import db
 from application.models import Fortunes
 from flask import request, response, render_template, redirect,url_for
 from random import randint, random
-from string import string
+import string
+import requests
 @app.route('/home', methods=['GET','POST'])
 def fortune():
     api = 'http://localhost:5003'
