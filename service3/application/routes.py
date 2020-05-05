@@ -1,5 +1,5 @@
 from application import app
-from flask import request, response
+from flask import request, Response
 from random import randint, random
 import string 
 @app.route('/charecter', methods=['GET', 'POST'])

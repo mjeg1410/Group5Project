@@ -1,13 +1,13 @@
 from application import app
 from application import db
 from application.models import Fortunes
-from flask import request, response, render_template, redirect,url_for
+from flask import  request, render_template, redirect,url_for
 from random import randint, random
 import string
 import requests
 @app.route('/home', methods=['GET','POST'])
 def fortune():
-    api = 'http://localhost:5003'
+    api = 'http://service4:5003'
 
     tokenadd =  request.get(api + '/merge')
     token = tokenadd.text

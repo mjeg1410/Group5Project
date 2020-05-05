@@ -1,9 +1,9 @@
 from application import app
-from flask import request, response
+from flask import request, Response
 from random import randint, random
-from string import string
-api1 = 'http://localhost:5001'
-api2 = 'http://localhost:5002'
+import string
+api1 = 'http://service2:5001'
+api2 = 'http://service3:5002'
 
 @app.route('/merge', methods=['GET','POST'])
 def merge():
