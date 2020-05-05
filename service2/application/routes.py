@@ -7,5 +7,5 @@ from random import randint
     #return response(lucky_number)
 @app.route('/number', methods=['GET', 'POST'])
 def numsection():
-    numsect=randint(0,100)
-    return response(numsect)
+    numsect=random.randrange(0,1000)
+    return Response(numsect)
