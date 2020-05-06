@@ -15,7 +15,7 @@ def fortune():
     tokenadd =  requests.get('http://service4:5003/merge')
     token =tokenadd.text
     fortunes= ["You will have a terrible day","You will have a mediocre day","You will have a great day"]
-    if token[0] == "1":
+    if token[0] == "1" or token[0] == "3" or token[0] == "5" or token[0] == "7":
         #fortuneshown =Fortunes(fortune=fortunes[0]) 
         fortuneshown=fortunes[0]
     elif token[0] == "9":
