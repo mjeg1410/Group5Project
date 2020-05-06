@@ -17,13 +17,13 @@ def fortune():
     fortunes= ["You will have a terrible day","You will have a mediocre day","You will have a great day"]
     if token[0] == "1":
         fortuneshown =Fortunes(fortune=fortunes[0]) 
-        fortuneshown=fortunes[0]
+        #fortuneshown=fortunes[0]
     elif token[0] == "9":
-        fortuneshown = Fortunes(fortune=fortunes[2])
+        #fortuneshown = Fortunes(fortune=fortunes[2])
         fortuneshown=fortunes[2]
     else:
         fortuneshown=fortunes[1]
-        fortuneshown = Fortunes(fortune=fortunes[1])
+        #fortuneshown = Fortunes(fortune=fortunes[1])
     return Response(str(fortuneshown), mimetype="text/plain")
         #db.session.add(fortuneshown)
         #db.session.commit()
