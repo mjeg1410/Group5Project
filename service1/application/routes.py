@@ -22,8 +22,8 @@ def fortune():
         #fortuneshown = Fortunes(fortune=fortunes[2])
         fortuneshown=fortunes[2]
     else:
-        #fortuneshown=fortunes[1]
-        fortuneshown = Fortunes(fortune=fortunes[1])
+        fortuneshown=fortunes[1]
+        #fortuneshown = Fortunes(fortune=fortunes[1])
     return Response(str(fortuneshown), mimetype="text/plain")
         #db.session.add(fortuneshown)
         #db.session.commit()
