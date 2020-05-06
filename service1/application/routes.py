@@ -13,15 +13,17 @@ def home():
 def fortune():
     api = 'http://service4:5003'
     tokenadd =  requests.get('http://service4:5003/merge')
-    token =[tokenadd]
+    token =tokenadd.text
     fortunes= ["You will have a terrible day","You will have a mediocre day","You will have a great day"]
-    fortuneshown= ("")
     if token[0] == "1":
-        fortuneshown = fortunes[0]
+        #fortuneshown =Fortunes(fortune=fortunes[0]) 
+        fortuneshown=fortunes[0]
     elif token[0] == "9":
-        fortuneshown = fortunes[2]
+        #fortuneshown = Fortunes(fortune=fortunes[2])
+        fortuneshown=fortunes[2]
     else:
-        fortuneshown = fortunes[1]
-    db.session.add(fortuneshown)
-    db.session.commit()
+        fortuneshown=fortunes[1]
+       # fortuneshown = Fortunes(fortune=fortunes[1])
+    #db.session.add(fortuneshown)
+   # db.session.commit()
     return render_template('fortune.html', title='Fortune', fortuneshown=fortuneshown)

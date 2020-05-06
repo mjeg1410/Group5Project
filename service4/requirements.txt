@@ -8,3 +8,4 @@ bcrypt==3.1.7
 Flask-Login==0.5.0
 pymysql 
 flask_bcrypt
+requests

@@ -11,4 +11,4 @@ def merge():
     response1 = requests.get(api1 +  '/number')
     response2 = requests.get(api2 + '/charecter')
     merged= (response1.text + response2.text)
-    return response(merged)
+    return Response(merged)
