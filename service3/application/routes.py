@@ -4,6 +4,6 @@ from random import randint, random, choice
 import string 
 @app.route('/charecter', methods=['GET', 'POST'])
 def random_charecter():
-    lucky_charecter= ''.join([choice(string.ascii_letters ) for n in range(3)])
+    lucky_charecter= ''.join([choice(string.ascii_letters ) for n in range(5)])
     return Response(lucky_charecter, mimetype="text/plain")
 
