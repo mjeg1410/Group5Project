@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   service1:
+    image: catherinewilson/service1
     build: ./service1
     ports:
       - target: 5000
@@ -9,18 +10,21 @@ services:
     env_file:
     - db.env        
   service2:
+    image: catherinewilson/service2      
     build: ./service2
     ports:
       - target: 5001
         published: 5001
         protocol: tcp
   service3:
+    image: catherinewilson/service1      
     build: ./service3
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
   service4:
+      image: catherinewilson/service1    
       build: ./service4
       ports:
         - target: 5003
