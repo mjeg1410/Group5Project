@@ -6,6 +6,8 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
+    env_file:
+    - db.env        
   service2:
     build: ./service2
     ports:
