@@ -24,10 +24,10 @@ def fortune():
     else:
         fortuneshown=fortunes[1]
         fortuneshown = Fortunes(fortune=fortunes[1])
-    return Response(str(fortuneshown), mimetype="text/plain")
-        #db.session.add(fortuneshown)
-        #db.session.commit()
-    #return render_template('fortune.html', title='Fortune', fortuneshown=fortuneshown)
+    #return Response(str(fortuneshown), mimetype="text/plain")
+        db.session.add(fortuneshown)
+        db.session.commit()
+    return render_template('fortune.html', title='Fortune', fortuneshown=fortuneshown)
 def output(fortuneshown):
     db.session.add(fortuneshown)
     db.session.commit()
